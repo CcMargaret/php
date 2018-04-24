@@ -16,6 +16,9 @@
         <?php
             @$fp = fopen("$DOCUMENT_ROOT/../oders/orders.txt",'rb')
 
+            flock($fp,LOCK_SH);//读操作锁定，该文件可以共享
+            flock($fp,UN);//释放已有的锁定
+
             if(!$fp){
                 echo "<p><strong>No orders pending."
                 Please try again later.</strong></p>;
@@ -25,6 +28,14 @@
                 $order = fgets($fp,999);
                 echo $order."<br/>"
             }
+            echo 'Final position of the file pointer is'.(ftell($fp));//以字节为单位报告文件指针当前位置
+            echo '<br/>';
+            rewind($fp);//文件指针复位到文件开始位置
+            echo 'After rewind,the position is '.(ftell($fp));
+            echo '<br/>';
+
+            fclock($fp);
+
         ?>
     </body>
 </html>
