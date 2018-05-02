@@ -64,8 +64,9 @@
                         .$address."\n";
         // open file for appending     
         @ $fp = fopen("$DOCUMENT_ROOT/../orders/orders.txt",'ab');
+
         
-        flock($fp,LOCK_EX)
+        flock($fp,LOCK_EX);
 
         if (!$fp) {
             echo "<p><strong>your order could not be processed at thia time.

@@ -12,7 +12,7 @@
             </tr>
             <?php
 
-                $ditance = 50;
+                $distance = 50;
                 while ($distance<=250){
                     echo "<tr>
                         <td align=\"right\">".$distance."</td>

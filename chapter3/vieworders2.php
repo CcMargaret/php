@@ -13,7 +13,7 @@
         <h2>Customer Orders</h2>
 
         <?php
-            $orders = file("$DOCUMENT_ROOT/../orders/order.txt");
+            $orders = file("$DOCUMENT_ROOT/../orders/orders.txt");
 
             $number_of_orders = count($orders);
 
@@ -31,7 +31,8 @@
                         <th bgcolor=\"#CCCCFF\">Address</th>
                       </tr>";
             
-                for($i = 0;$i < $number_of_orders;$i++){
+                for($i = 0;$i < $number_of_orders;$i++)
+                {
 
                     $line = explode("\t",$orders[$i]);
 
@@ -39,17 +40,20 @@
                     $line[2]=intval($line[2]);
                     $line[3]=intval($line[3]);
 
+                   
+
                     echo "<tr>
                             <td>".$line[0]."</td>
                             <td align=\"right\">".$line[1]."</td>
                             <td align=\"right\">".$line[2]."</td>
                             <td align=\"right\">".$line[3]."</td>
                             <td align=\"right\">".$line[4]."</td>                                                    
-                            <td>".$line[5]"</td>
-                          </tr>";/
+                            <td>".$line[5]."</td>
+                          </tr>";
                 }
                 
-                echo "</table>";      
+                echo "</table>";    
+                
         ?>
 
     </body>

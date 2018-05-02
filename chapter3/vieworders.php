@@ -4,7 +4,7 @@
     //使用php显示BOb的订单内容
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
 
-    $orders = file("$DOCUMENT_ROOT/../oders/order.txt");
+    $orders = file("$DOCUMENT_ROOT/../orders/orders.txt");
 
     $number_of_orders = count($orders);
 

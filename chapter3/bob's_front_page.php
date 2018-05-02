@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-    $pictures = array('tire.jpg','oil.jpg','spark_plug.jpg,
+    $pictures = array('tire.jpg','oil.jpg','spark_plug.jpg',
                       'door.jpg','steering_wheel.jpg',
                       'thermostat.jpg','wiper_blade.jpg',
                       'gasket.jpg','brake_pad.jpg');
